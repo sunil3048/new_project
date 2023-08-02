@@ -1,1 +1,1 @@
-print("you are great")
+print("thank you for support and guidance")
