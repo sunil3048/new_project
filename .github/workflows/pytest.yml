@@ -35,4 +35,13 @@ jobs:
       - name: run python script
         run: |
             python Hello_code.py
-        
+  
+      - name: Build & push Docker image 
+        uses: mr-smithers-excellent/docker-build-push@v6
+        with:
+          image: sunil0905/learning
+          tags: v1, latest
+          registry: docker.io
+          dockerfile: Dockerfile.ci
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}        
