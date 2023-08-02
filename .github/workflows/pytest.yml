@@ -40,7 +40,7 @@ jobs:
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
           image: sunil0905/learning
-          tags: v1, latest
+          tags: v1
           registry: docker.io
           dockerfile: Dockerfile.ci
           username: ${{ secrets.DOCKER_USERNAME }}
